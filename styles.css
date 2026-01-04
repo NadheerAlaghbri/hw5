@@ -1,0 +1,39 @@
+:root{
+  --bg1:#f6d365;
+  --bg2:#fda085;
+  --card:#ffffff;
+  --accent:#4a90e2;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:900px;margin:0 auto;padding:20px}
+.site-header{background:rgba(255,255,255,0.08);backdrop-filter:blur(6px);padding:14px 0}
+.logo{margin:0;display:inline-block;font-weight:700}
+.nav{display:inline-block;float:left}
+.nav-link{margin-left:14px;text-decoration:none;color:rgba(0,0,0,0.75);padding:8px 12px;border-radius:8px}
+.nav-link.active{background:var(--card);box-shadow:0 4px 10px rgba(0,0,0,0.08)}
+.main-card{margin-top:40px;background:var(--card);padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+h1,h2{margin:0 0 12px}
+p{color:var(--muted);line-height:1.6}
+.actions{margin-top:18px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;margin-left:10px}
+.btn.outline{background:transparent;border:2px solid rgba(0,0,0,0.08);color:var(--accent)}
+.site-footer{margin-top:30px;padding:16px 0;color:rgba(0,0,0,0.6)}
+@media (max-width:600px){
+  .nav{float:none;margin-top:12px}
+  .nav-link{display:inline-block;margin:6px 6px 0 0}
+  .container{padding:16px}
+  .main-card{padding:18px}
+}
+/* Ensure RTL spacing */
+[dir="rtl"] .nav-link{margin-left:0;margin-right:14px}
+[dir="rtl"] .btn{margin-left:0;margin-right:10px}
